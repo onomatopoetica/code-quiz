@@ -1,0 +1,26 @@
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: black;
+}
+
+.marquee {
+    padding-top: 90px;
+    padding-bottom: 1px;
+    font-family: 'Satisfy', cursive;
+    color: cornflowerblue;
+}
+
+
+.quizIntro {
+    padding-top: 0px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
