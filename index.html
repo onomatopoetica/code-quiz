@@ -1,58 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
     <!-- Local CSS -->
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" type=text/css href="style.css">
+
     <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
     <!-- Font Awesome -->
+
     <script src="https://kit.fontawesome.com/792cbaa3d1.js" crossorigin="anonymous"></script>
+
     <!-- Page Title -->
+
     <title>Javascript Code Quiz!</title>
 </head>
+
+<!-- Body -->
+
 <body>
-    <!-- Header container -->
-    <header class="container-fluid" style="background-color: black;">
-        <!-- Div for scores link and time -->
-        <div class="row" style="background-color: black;">
-            <!-- View highscores -->
-            <div class="col-6">
-                <a href="highscores.html" style="color: white;">High Scores <i class="fas fa-rocket" style="color: cornflowerblue;"></i></a>
-            </div>
-            <!-- Timer -->
-            <div id="countdown" class="col-6">
-                <p class="d-flex justify-content-end time" style="background-color: black; color: white;">Time:75s</p>
+    <header class="quizIntro">
+        <div class="container-fluid col-6" style="color:white; background-color: black; max-width: 100%;">
+
+    <!-- View/link to highscores -->
+
+            <a href="highscores.html" style="color: white;">High Scores <i class="fas fa-rocket"
+                    style="color: cornflowerblue;"></i></a>
+
+            <!-- Timer container -->
+
+            <div id="quizContainer">
+                <div id="currentTime" class="timer" style="color: white;" class="d-flex justify-content-end time">75 seconds <i class="fas fa-clock"
+                        style="color: cornflowerblue;"></i></div>
+    </header>
+
+    <!-- Quiz content -->
+
+    <section>
+    <div id="questionsSection">
+        <div class="row">
+            <div class="col-sm" max-width=100% style="background-color: black; color: white; text-align: center;">
+                <marquee class="marquee" behavior="slide" direction="down" style="text-align: center; font: 3em satisfy;">WELCOME</marquee>
+                <h3 class="quizIntro" style="text-align: center;">to the JavaScript Code Quiz:</h3>
+                <br>
+                    <h5>Answer the following questions as quickly as you are able, you will be timed!</h5>
+                    <h5>You have 75 seconds to answer questions testing your knowledge of JavaScript fundamentals.</h5>
+                    <h5>Note: incorrect answers will have a penalty of 10 seconds! Will you get the highscore?</h5>
+                <br>
+                    <h5>GOOD LUCK!</h5>
+                <br>
+                <br>
+                <div class="controls" style="background-color: black; color: white;">
+                    <button id="startTimer" type="button" class="start-btn btn-light btn">Start Quiz!</button>
+                    <!-- <br>
+                    <button id="next" type="button" class="next-btn btn hide">Next</button> -->
+                </div>
             </div>
         </div>
-    </header> 
-    <!-- Main content -->
-    <main class="container-fluid" style="background-color: black; color: white; text-align: center;">
-        <marquee class="marquee" behavior="slide" direction="down" style="text-align: center; font: 3em satisfy;">WELCOME!</marquee>
-        <h1 class="quizIntro" style="text-align: center;">This is your JavaScript Fundamentals code quiz!</h1>
-        <h3>You will have 75 seconds to answer questions testing your knowledge of JavaScript fundamentals.</h3> 
-        <br>
-        <h4>Note: incorrect answers will have a penalty of 15 seconds!</h4>
-        <br>
-        <button id="start" type="button" class="btn btn-light">START QUIZ!</button>
-    </main>
-    <!-- Footer content -->
-    <footer>
-        <div class="footer" style="background-color: black; color: cornflowerblue;">
-            <h6>&#169; JenDotB 2020</h6>
-        </div>
-    </footer>    
-    <!-- Local JS -->
-    <script src="script.js"></script>
-    <!-- Javascript CDN -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <ul id="questionsUl" style="color: white; background-color: black;"></ul>
+    </div>
+    </section>  
+
+<!-- Footer content -->
+
+<footer>
+    <div class="footer" style="background-color: black; color: cornflowerblue;">
+        <h6>&#169; JenDotB 2020</h6>
+    </div>
+</footer>
+
+<!-- Local JS -->
+
+<script src="script.js"></script>
+
+<!-- Javascript CDN -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
 </body>
+
 </html>

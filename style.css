@@ -1,26 +1,60 @@
 * {
     font-family: 'Source Sans Pro', sans-serif;
     background-color: black;
+    cursor: pointer;
 }
 
 .marquee {
     padding-top: 10px;
-    padding-bottom: 1px;
+    padding-bottom: 0px;
     font-family: 'Satisfy', cursive;
     color: cornflowerblue;
 }
 
-
-.quizIntro {
-    padding-top: 40px;
+h6 {
+    color: cornflowerblue;
 }
+
+ul, li, h1, p, div {
+    color: white;
+}
+
+#quizIntro {
+    padding-top: 100px;
+}
+
+#highScores {
+    padding-top: 90px;
+}
+
+button {
+    border-radius: 8px;
+}
+
+textarea {
+    width: 90%;
+    margin: 20px;
+}
+
+.btn:hover {
+    border-color: rgb(119, 43, 226);
+}
+/* 
+.btn.correct {
+    --hue: var(--hue-correct);
+}
+
+.btn.wrong {
+    --hue: var(--hue-wrong);
+} */
 
 .footer {
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 0;  
     width: 100%;
     background-color: black;
-    color: white;
+    color: cornflowerblue;
     text-align: center;
 }
+       
