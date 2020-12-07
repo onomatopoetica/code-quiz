@@ -50,8 +50,8 @@ var questions = [
     },
     {
         title: "How do you create an IF statement for executing some code if 'i' is NOT equal to 5?",
-        options: ["if i=! 5 then", "if (i || 5)", "if i (i != 5)", "if (i % 5)"],
-        answer: "if i (i != 5)"
+        options: ["if i=! 5 then", "if (i || 5)", "if (i != 5)", "if (i % 5)"],
+        answer: "if (i != 5)"
     },
     {
         title: "How do you find the number with the highest value of x and y?",
