@@ -34,22 +34,47 @@ ul, li, h1, p, div {
     color: white;
 }
 
+ul, li {
+    text-align: center;
+    list-style-type: none;
+}
+
 #quizIntro {
     padding-top: 100px;
 }
 
 #questionsSection {
-    /* padding-right: 20%;
-    padding-left: 20%; */
-    /* top: 100px;
+    text-align: center;
+    top: 100px;
     color: white;
-    font-size: 1.25em; */
-    /* width: 800px;
-    height: 800px;
-    border: 1px solid cornflowerblue;
-    border-style: dashed; */
+    font-size: 1.25em; 
 }
+
+/* #quizContainer {
+    text-align: center;
+} */
+
+#answerDiv {
+    padding-top: 120;
+    text-align: center;
+}
+
+#h1El {
+    padding-top: 100px;
+    text-align: center;
+}
+
+#pEl {
+    padding-top: 110px;
+    text-align: center;
+}
+
+#pEl2 {
+    text-align: center;
+}
+
 #enterInitials {
+    text-align: center;
     background-color: black;
     color: white;
 }
@@ -58,25 +83,19 @@ ul, li, h1, p, div {
     padding-top: 90px;
 }
 
-button {
-    border-radius: 5px;
-    padding: none;
+#initials {
+    text-align: center;
 }
 
-.textarea {
+textarea {
     width: 90%;
     margin: 20px;
     color: white;
 }
 
 #Submit {
-    background-color: white;
-    margin-left: 33%;
-    padding: 15px 32px;
-    font-size: 20px;
-    color: black;
-    border-color: rgb(119, 43, 226);
-}
+    margin-left: 5px;
+  }
 
 .btn:hover {
     border-color: rgb(119, 43, 226);
