@@ -26,7 +26,7 @@
 
 ### Demo
 
-#### [See how it works!](PLACEHOLDER) This video clip demonstrates the code quiz application's rendering and functionality on a mobile device. 
+#### [See how it works!](https://drive.google.com/file/d/1L9QIBxXxxwo2-Fv5dmZX0-csbnvOpCZB/view) This video clip demonstrates the code quiz application's rendering and functionality on a mobile device. 
 
 ##### The following is a screenshot of the application and overview of its functionality: <br>
 
