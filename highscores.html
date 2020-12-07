@@ -55,17 +55,22 @@
     <section>
         <div class="container-fluid" style="text-align: center;">
             <div class="row">
-                <div id="currentTime"></div>
+                <div id="currentTime">
+                </div>
             <div id="questionsSection">
-                <ul id="highScores" style="text-align: center; color: white;"></ul>
-            </div>   
-        </div>     
-        
-    <!-- Clear score button -->
-
-                <button id="clear" type="button" input type="reset" class="start-btn btn-light btn">Clear Highscore!</button>
+                <ul id="highScores" style="text-align: center; color: white;"></ul>   
             </div>
-        </div>
+            </div>  
+
+    <!-- Clear score & go back buttons -->
+
+            <div class="clearScore">
+                <button id="clear" type="button" input type="reset" class="btn-light btn">Clear Highscore!</button>
+            </div>
+            <br>
+            <div class="goBack">
+                <button id="goBack" type="button" class="btn-light btn" value="Go Back" onclick="goBack()">Go Back</button>
+            </div>        
     </section>
 
     <!-- Footer content --> 
