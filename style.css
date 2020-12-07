@@ -17,11 +17,15 @@
     float: right;
 } */
 
+/* #currentTime.timer {
+    padding-top: 90px;
+    text-align: center;
+} */
+
 .marquee {
     padding-top: 10px;
     padding-bottom: 0px;
     margin: none;
-    /* max-width: 60%; */
     font-family: 'Satisfy', cursive;
     color: cornflowerblue;
 }
@@ -45,7 +49,7 @@ ul, li {
 
 #questionsSection {
     text-align: center;
-    top: 100px;
+    padding-top: 130px;
     color: white;
     font-size: 1.25em; 
 }
@@ -55,17 +59,21 @@ ul, li {
 } */
 
 #answerDiv {
-    padding-top: 120;
+    padding-top: 5px;
     text-align: center;
+}
+
+#scoresRow {
+    padding-top: 150px;
 }
 
 #h1El {
     padding-top: 100px;
-    text-align: center;
+    text-align: center;     
 }
 
 #pEl {
-    padding-top: 110px;
+    padding-top: 80px;
     text-align: center;
 }
 
@@ -85,20 +93,23 @@ ul, li {
 
 #initials {
     text-align: center;
+    background-color: white;
+    width: 60px;
 }
 
-textarea {
+/* textarea {
     width: 90%;
     margin: 20px;
     color: white;
-}
+} */
 
-#Submit {
-    margin-left: 5px;
+#submit {
+    margin-left: 10px;
+    margin-bottom: 4px;
   }
 
 .btn:hover {
-    border-color: rgb(119, 43, 226);
+    border-color: rgb(68, 30, 121);
 }
 /* 
 .btn.correct {

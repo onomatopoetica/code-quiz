@@ -22,18 +22,19 @@ var questionsSection = document.querySelector("#questionsSection");
 var quizContainer = document.querySelector("#quizContainer");
 // var allScores = [];
 var allScores = JSON.parse(localStorage.getItem("allScores")) || [];
-            // if (allScores === null) {
-            //     allScores = [];
-            // }
-            // else {
-            //     allScores = JSON.parse(allScores);
-            // }
-// document.getElementById("startQuiz").addEventListener("click", function() {
-//   $("#landing").slideToggle();
-//   $("#questions").slideToggle();
-//   document.getElementById("landing").style.display = "none";
-//   document.getElementById("questions").style.display = "block";
+// if (allScores === null) {
+//     allScores = [];
+// }
+// else {
+//     allScores = JSON.parse(allScores);
+// }
+// document.getElementById("quizContainer").addEventListener("click", function() {
+// //   $("#landing").slideToggle();
+// //   $("#questions").slideToggle();
+//   document.getElementById("quizIntro").style.display = "none";
+//   document.getElementById("quizContainer").style.display = "block";
 
+// })
 // });
 
 // Quiz time remaining
@@ -194,7 +195,7 @@ function quizComplete() {
 
     questionsSection.appendChild(pEl);
 
-    // Calculates time remaining and replaces it with score
+    // Calculates time remaining and creates score
 
     if (secondsLeft >= 0) {
         var timeRemaining = secondsLeft;
@@ -228,19 +229,20 @@ function quizComplete() {
     initialsSubmit.setAttribute("class", "btn btn-light");
     // button.className = "btn btn-primary";
     initialsSubmit.setAttribute("type", "submit");
-    initialsSubmit.setAttribute("id", "Submit");
+    initialsSubmit.setAttribute("id", "submit");
     initialsSubmit.textContent = "Submit";
 
     questionsSection.appendChild(initialsSubmit);
 
     // Event listener to capture initials and score in local storage 
 
-    initialsSubmit.addEventListener("click", function(event) {
+    initialsSubmit.addEventListener("click", function (event) {
         event.preventDefault();
         var initials = userInput.value;
         console.log(initials);
         if (!initials) {
-            alert("Please enter a valid value!");
+            // alert("Please enter a valid value!");
+            this.textContent = "Enter a valid value!";
             console.log(initialsSubmit);
         }
         else {
@@ -263,14 +265,17 @@ function quizComplete() {
             // Adds score to final page
 
             window.location.replace("highscores.html");
+            // render(newScore);
         }
+        // render(newScore);
     });
-
+    // render(score);
+    // console.log(render(score));
 }
 
-function goBack() {
-    window.history.back()
-  }
+// function goBack() {
+//     window.history.back()
+// }
 
 // function startGame() {
 
