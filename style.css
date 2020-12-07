@@ -64,16 +64,17 @@ ul, li {
 }
 
 #scoresRow {
-    padding-top: 150px;
+    padding-top: 100px;
 }
 
 #h1El {
     padding-top: 100px;
-    text-align: center;     
+    text-align: center;  
+    color: cornflowerblue;   
 }
 
 #pEl {
-    padding-top: 80px;
+    padding-top: 60px;
     text-align: center;
 }
 
