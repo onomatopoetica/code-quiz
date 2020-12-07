@@ -268,7 +268,7 @@ function quizComplete() {
         }
         // render(newScore);
     });
-    render(newScore);
+    // render(newScore);
     // console.log(render(score));
 }
 
