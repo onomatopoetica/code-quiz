@@ -82,6 +82,12 @@ ul, li {
     text-align: center;
 }
 
+h3 {
+    background-color: black;
+    color: white;
+    margin: 0px;
+}
+
 #enterInitials {
     text-align: center;
     background-color: black;
