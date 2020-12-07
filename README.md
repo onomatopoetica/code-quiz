@@ -70,6 +70,7 @@ THEN the student can save their initials and score
 #### Articles and sites which contributed toward the successful completion of this project are included below:
 
 [JavaScript Tutorial](https://www.javascripttutorial.net/) <br>
+[JavaScript.com](https://www.javascript.com/) <br>
 [JavaScript Timers Article on freeCodeCamp](https://www.freecodecamp.org/news/javascript-timers-everything-you-need-to-know-5f31eaa37162/) <br>
 [A Smarter Way To Learn JavaScript](https://www.asmarterwaytolearn.com/js/) <br>
 [JSHint](https://jshint.com/) <br>
