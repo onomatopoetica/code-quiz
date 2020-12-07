@@ -40,7 +40,7 @@ THEN the student can save their initials and score
 
 <img src="assets/Welcome.png" width=500 height=auto>
 
-<img src="assets/Quiz.png" width=500 height=auto>
+<img src="assets/Quiz0.png" width=500 height=auto>
 
 <img src="assets/Finis.png" width=500 height=auto>
 
