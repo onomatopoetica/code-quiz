@@ -90,23 +90,22 @@ var ulEl = document.createElement("ul");
 console.log(ulEl);
 console.log(timer);
 if (timer !== null) {
-    timer.addEventListener("click", function () {
+    timer.addEventListener("click", function() {
         if (holdInterval === 0) {
-            holdInterval = setInterval(function () {
+            holdInterval = setInterval(function() {
                 secondsLeft--;
                 currentTime.textContent = secondsLeft + " seconds";
 
                 if (secondsLeft <= 0) {
                     clearInterval(holdInterval);
                     quizComplete();
-                    currentTime.textContent = "OOOPS, OUT OF TIME!";
+                    currentTime.textContent = "OOOPS! OUT OF TIME!";
                 }
             }, 1000);
         }
         render(questionIndex);
     });
 }
-
 console.log(questionIndex);
 
 // Renders questions: 
@@ -128,7 +127,7 @@ function render(questionIndex) {
     }
     // New for each for question
 
-    userChoices.forEach(function (newItem) {
+    userChoices.forEach(function(newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
         questionsSection.appendChild(ulEl);
@@ -236,7 +235,7 @@ function quizComplete() {
 
     // Event listener to capture initials and score in local storage 
 
-    initialsSubmit.addEventListener("click", function (event) {
+    initialsSubmit.addEventListener("click", function(event) {
         event.preventDefault();
         var initials = userInput.value;
         console.log(initials);
