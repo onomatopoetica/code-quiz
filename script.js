@@ -20,8 +20,11 @@ var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTimer");
 var questionsSection = document.querySelector("#questionsSection");
 var quizContainer = document.querySelector("#quizContainer");
+// Adding clear ID
+// var clear = document.querySelector("#clear");
 // var allScores = [];
 var allScores = JSON.parse(localStorage.getItem("allScores")) || [];
+
 // if (allScores === null) {
 //     allScores = [];
 // }
@@ -175,7 +178,7 @@ function compare(event) {
     questionsSection.appendChild(answerDiv);
 
 }
-// Quiz complete appends page
+// Quiz complete clear questionsSection
 
 function quizComplete() {
     questionsSection.innerHTML = "";
@@ -241,15 +244,63 @@ function quizComplete() {
         console.log(initials);
         if (!initials) {
             // alert("Please enter a valid value!");
-            this.textContent = "Enter a valid value!";
+            document.querySelector("#submit").textContent = "Enter a valid value!";
             console.log(initialsSubmit);
         }
-        else {
+        else {       
+            // var clearButton = document.createElement("button");
+            // clearButton.setAttribute("class", "btn btn-light");
+            // clearButton.setAttribute("value", "reset");
+            // clearButton.setAttribute("id", "clear");
+            // clearButton.textContent = "Clear Scores";
+            // clearButton.addEventListener("click", function() {
+            //     // localStorage.clear();
+            //     // location.reload();
+            // clearButton.onclick = localStorage.clear();
+            // });
             var finalScore = {
                 initials: initials,
                 score: timeRemaining
             }
-            console.log(finalScore);
+            
+            // var homeButton = document.createElement("button");
+            // homeButton.setAttribute("class", "btn btn-light");
+            // homeButton.setAttribute("type", "submit");
+            // homeButton.setAttribute("id", "home");
+            // homeButton.textContent = "Home";
+            // homeButton.onclick = function visitPage() {
+            //     window.open("index.html");
+            // }
+
+            // Clearing HTML at #questionSection 
+
+            document.querySelector("#questionsSection").innerHTML = "";
+           
+            // Append final score and button
+
+            // document.querySelector("#questionsSection").append(clearButton);
+            // document.querySelector("#questionsSection").append(homeButton);
+          
+            // var finalScore = {
+            //     initials: initials,
+            //     score: timeRemaining
+            // }
+
+            // Create High Scores page heading
+
+            var h2El = document.createElement("h2");
+            h2El.setAttribute("id", "h2El");
+            h2El.textContent = "High Scores!"
+            // Append element to page
+            questionsSection.appendChild(h2El);
+
+
+            // document.querySelector("#questionsSection").append(clearButton);
+
+            // Append homeButton
+
+            // document.querySelector("#questionsSection").append(homeButton);
+            // console.log(finalScore);
             // var allScores = localStorage.getItem("allScores");
             // if (allScores === null) {
             //     allScores = [];
@@ -260,18 +311,31 @@ function quizComplete() {
             allScores.push(finalScore);
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
-
+            
             // Adds score to final page
 
-            window.location.replace("highscores.html");
+            // window.location.replace("highscores.html");
             // render(newScore);
+            // var ulEl2 = document.createElement("ul");
+            // ulEl2.setAttribute("id", "ulEl2");
+            for (let i = 0; i < allScores.length; i++) {
+                const el = allScores[i].initials + " " + allScores[i].score;
+                var li2 = document.createElement("li");  
+                li2.textContent = el;
+                var ul = document.querySelector("#highScoresUl");
+                ul.appendChild(li2);     
+                                
+            }
+            
         }
-        // render(newScore);
+       
     });
+
     // render(newScore);
     // console.log(render(score));
 }
 
+    
 // function goBack() {
 //     window.history.back()
 // }
