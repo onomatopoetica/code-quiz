@@ -44,8 +44,6 @@ THEN the student can save their initials and score
 
 <img src="assets/Finis.png" width=500 height=auto>
 
-<img src="assets/FinalScore68.png" width=500 height=auto>
-
 ### Getting Started
 #### Installation - Clone the repo: <br>
    ```  
