@@ -1,4 +1,4 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/onomatopoetica/code-quiz)  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/onomatopoetica/code-quiz)  ![GitHub watchers](https://img.shields.io/github/watchers/onomatopoetica/code-quiz?label=Watch&style=social)  
+![GitHub last commit](https://img.shields.io/github/last-commit/onomatopoetica/code-quiz)  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/onomatopoetica/code-quiz)  ![GitHub watchers](https://img.shields.io/github/watchers/onomatopoetica/code-quiz?label=Watch&style=social)  ![GitHub top language](https://img.shields.io/github/languages/top/onomatopoetica/code-quiz)
 
 
 ## Code Quiz Project 
