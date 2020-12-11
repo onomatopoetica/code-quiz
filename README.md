@@ -6,12 +6,16 @@
 ---
 
 ### Table of Contents
+1. [Project Links](#Project-Links)
 1. [About the Project](#About-The-Project)
 1. [Demo](#Demo)
 1. [Getting Started](#Getting-Started)
-1. [Project Links](#Project-Links)
 1. [Project Status](#Project-Status)
 1. [License](#License)
+
+### Project Links
+[Repo Link](https://github.com/onomatopoetica/code-quiz) <br>
+[GitHub Project Link](https://onomatopoetica.github.io/code-quiz/)
 
 ### About the Project
 
@@ -49,12 +53,7 @@ THEN the student can save their initials and score
    ```  
    git clone https://github.com/onomatopoetica/code-quiz.git
    ```
-
-### Project Links
-[Repo Link](https://github.com/onomatopoetica/code-quiz) <br>
-[GitHub Project Link](https://onomatopoetica.github.io/code-quiz/)
-
-
+   
 ### Project Status
 <details>
     <summary>Project Status</summary>
