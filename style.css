@@ -1,53 +1,58 @@
 * {
-    font-family: 'Source Sans Pro', sans-serif;
     background-color: black;
-    cursor: pointer;
-}
- 
-/* Button styling */
-
-.btn:hover {
-    border-color: rgb(68, 30, 121);
-}
-/* .scores {
-    margin-left: 20px;
-    margin-top: 30px;
 }
 
-#quizContainer {
-    margin-top: none;
-} 
-
-.timer {
-    float: right;
-} 
-
-#currentTime.timer {
-    padding-top: 90px;
-    text-align: center;
-}  */
+/* Global */
+html {
+    /* min-height: 100%; */
+    overflow: hidden;
+}
 
 body {
+    color: rgba(255,255,255,.75);
+    font-family: 'Courier New', Courier, monospace;
+    background-color: transparent;  
+}
+
+.line-1 { 
+    position: relative;
+    top: 50%;  
+    width: 18em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 220%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);   
+    background-color: transparent; 
+}
+  
+/* Animation */
+.typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;    
+}
+
+@keyframes typewriter {
+    from{width: 0;}
+    to{width: 22em;}
+} 
+
+@keyframes blinkTextCursor {
+    from{border-right-color: rgba(74, 112, 238, 0.75);}
+    to{border-right-color: transparent;}
+}
+ 
+body, .jumbotron {
     background-color: black;
+    align-items: center;
 }
 
-/* Welcome marquee */
-
-.marquee {
-    padding-top: 10px;
-    padding-bottom: 0px;
-    margin: none;
-    font-family: 'Satisfy', cursive;
-    color: cornflowerblue;
-    cursor: none;
+.quiz {
+    width: 900px;
 }
-
-/* Element styling */
-
-h6 {
-    color: cornflowerblue;
-}
-
+    
 ul, li, h1, p, div {
     color: white;
     background-color: black;
@@ -59,25 +64,41 @@ ul, li {
     background-color: black;
 }
 
-/* Intro section styling */
+.card-body, p.text {
+    background-color: transparent;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px black;
+    font-family: sans-serif;
+}
 
+.btn {
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* Intro section styling */
 #quizIntro {
-    padding-top: 100px;
+    padding-top: 70px;
 }
 
 /* Questions section styling */
-
-#questionsSection {
-    text-align: center;
-    padding-top: 130px;
+ul, div#questionsSection {
+    align-items: center;
+    text-align: center; 
     background-color: black;
     color: white;
     font-size: 1.25em; 
+    cursor: pointer;
+    outline: none !important;
+    border-color: #000000;
 }
 
-/* #quizContainer {
-    text-align: center;
-} */
+ul, div#questionsSection::after {
+    padding-top: 140px;
+}
 
 #answerDiv {
     padding-top: 5px;
@@ -89,11 +110,10 @@ ul, li {
 }
 
 /* JS created elements styling */
-
 #h1El {
-    padding-top: 100px;
+    padding-top: 140px;
     text-align: center;  
-    color: cornflowerblue;   
+    color: cornflowerblue; 
 }
 
 #pEl {
@@ -106,26 +126,22 @@ ul, li {
 }
 
 #h2El {
-    font-family: 'Source Sans Pro', sans-serif;
+    padding-top: 90px;
     color: cornflowerblue;
-    cursor: none;
     text-align: center;
 } 
 
-/* h3 {
-    background-color: black;
-    color: white;
-    margin: 0px;
-} */
-
-#enterInitials {
+#enterInitials, input#Initials {
     text-align: center;
     background-color: black;
     color: white;
+    outline: none !important;
 }
 
-#highScores {
-    padding-top: 90px;
+ul#highScoresUl, ul#questionsUl {
+    padding-top: 0px;
+    text-align: center;
+    align-items: center;
 }
 
 #initials {
@@ -133,12 +149,6 @@ ul, li {
     background-color: white;
     width: 60px;
 }
-
-/* textarea {
-    width: 90%;
-    margin: 20px;
-    color: white;
-} */
 
 #submit {
     margin-left: 10px;
@@ -150,22 +160,62 @@ ul, li {
     margin-top: 120px;
 }
 
-/* 
-.btn.correct {
-    --hue: var(--hue-correct);
-}
-
-.btn.wrong {
-    --hue: var(--hue-wrong);
-} */
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;  
-    width: 100%;
-    background-color: black;
+.onomatopoetica {
     color: cornflowerblue;
-    text-align: center;
 }
-       
+  
+#content-wrap {
+    padding-bottom: .5rem; /* Footer height */
+}
+  
+#footer, .madeWithLove {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; /* Footer height */
+    background-color: transparent;
+    color: cornflowerblue;
+    text-align: center;            
+}
+
+/* Smaller screens */
+@media (max-width: 1050px) {
+    div.hometimer {
+        font-size: .85;
+    }
+    
+    .typewriter {
+        font-size: 1rem;
+    }
+    
+    img.quiz {
+        width: 350px;
+    }
+   
+    .card-body, p.text {
+        background-color: transparent;
+        color: #FFFFFF;
+        text-shadow: 1px 1px black;
+        font-size: .85rem;
+        padding: none;
+        margin: none;
+    }
+ 
+    .luck {
+        font-size: 1rem;
+        text-shadow: 1px 1px black;
+    }
+
+    ul, div#questionsSection {
+        font-size: 1rem;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        align-items: center;
+    }
+     
+    .madeWithLove {
+        font-size: .55rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
+

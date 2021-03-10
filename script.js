@@ -1,17 +1,3 @@
-// ACCEPTANCE CRITERIA
-
-// GIVEN I am taking a code quiz
-// WHEN I click the start button
-// THEN a timer starts and I am presented with a question
-// WHEN I answer a question
-// THEN I am presented with another question
-// WHEN I answer a question incorrectly
-// THEN time is subtracted from the clock
-// WHEN all questions are answered or the timer reaches 0
-// THEN the game is over
-// WHEN the game is over
-// THEN I can save my initials and score
-
 // Variables
 
 var score = 0;
@@ -20,25 +6,7 @@ var currentTime = document.querySelector("#currentTime");
 var timer = document.querySelector("#startTimer");
 var questionsSection = document.querySelector("#questionsSection");
 var quizContainer = document.querySelector("#quizContainer");
-// Adding clear ID
-// var clear = document.querySelector("#clear");
-// var allScores = [];
 var allScores = JSON.parse(localStorage.getItem("allScores")) || [];
-
-// if (allScores === null) {
-//     allScores = [];
-// }
-// else {
-//     allScores = JSON.parse(allScores);
-// }
-// document.getElementById("quizContainer").addEventListener("click", function() {
-// //   $("#landing").slideToggle();
-// //   $("#questions").slideToggle();
-//   document.getElementById("quizIntro").style.display = "none";
-//   document.getElementById("quizContainer").style.display = "block";
-
-// })
-// });
 
 // Quiz time remaining
 
@@ -93,9 +61,9 @@ var ulEl = document.createElement("ul");
 console.log(ulEl);
 console.log(timer);
 if (timer !== null) {
-    timer.addEventListener("click", function() {
+    timer.addEventListener("click", function () {
         if (holdInterval === 0) {
-            holdInterval = setInterval(function() {
+            holdInterval = setInterval(function () {
                 secondsLeft--;
                 currentTime.textContent = secondsLeft + " seconds";
 
@@ -111,7 +79,7 @@ if (timer !== null) {
 }
 console.log(questionIndex);
 
-// Renders questions: 
+// Renders questions
 
 function render(questionIndex) {
 
@@ -130,7 +98,7 @@ function render(questionIndex) {
     }
     // New for each for question
 
-    userChoices.forEach(function(newItem) {
+    userChoices.forEach(function (newItem) {
         var listItem = document.createElement("li");
         listItem.textContent = newItem;
         questionsSection.appendChild(ulEl);
@@ -229,7 +197,6 @@ function quizComplete() {
 
     var initialsSubmit = document.createElement("button");
     initialsSubmit.setAttribute("class", "btn btn-light");
-    // button.className = "btn btn-primary";
     initialsSubmit.setAttribute("type", "submit");
     initialsSubmit.setAttribute("id", "submit");
     initialsSubmit.textContent = "Submit";
@@ -238,119 +205,50 @@ function quizComplete() {
 
     // Event listener to capture initials and score in local storage 
 
-    initialsSubmit.addEventListener("click", function(event) {
+    initialsSubmit.addEventListener("click", function (event) {
         event.preventDefault();
         var initials = userInput.value;
         console.log(initials);
         if (!initials) {
-            // alert("Please enter a valid value!");
             document.querySelector("#submit").textContent = "Enter a valid value!";
             console.log(initialsSubmit);
         }
-        else {       
-            // var clearButton = document.createElement("button");
-            // clearButton.setAttribute("class", "btn btn-light");
-            // clearButton.setAttribute("value", "reset");
-            // clearButton.setAttribute("id", "clear");
-            // clearButton.textContent = "Clear Scores";
-            // clearButton.addEventListener("click", function() {
-            //     // localStorage.clear();
-            //     // location.reload();
-            // clearButton.onclick = localStorage.clear();
-            // });
+        else {
             var finalScore = {
                 initials: initials,
                 score: timeRemaining
             }
-            
-            // var homeButton = document.createElement("button");
-            // homeButton.setAttribute("class", "btn btn-light");
-            // homeButton.setAttribute("type", "submit");
-            // homeButton.setAttribute("id", "home");
-            // homeButton.textContent = "Home";
-            // homeButton.onclick = function visitPage() {
-            //     window.open("index.html");
-            // }
 
             // Clearing HTML at #questionSection 
 
             document.querySelector("#questionsSection").innerHTML = "";
-           
-            // Append final score and button
-
-            // document.querySelector("#questionsSection").append(clearButton);
-            // document.querySelector("#questionsSection").append(homeButton);
-          
-            // var finalScore = {
-            //     initials: initials,
-            //     score: timeRemaining
-            // }
 
             // Create High Scores page heading
 
             var h2El = document.createElement("h2");
             h2El.setAttribute("id", "h2El");
             h2El.textContent = "High Scores!"
+
             // Append element to page
+
             questionsSection.appendChild(h2El);
 
-
-            // document.querySelector("#questionsSection").append(clearButton);
-
-            // Append homeButton
-
-            // document.querySelector("#questionsSection").append(homeButton);
-            // console.log(finalScore);
-            // var allScores = localStorage.getItem("allScores");
-            // if (allScores === null) {
-            //     allScores = [];
-            // }
-            // else {
-            //     allScores = JSON.parse(allScores);
-            // }
             allScores.push(finalScore);
             var newScore = JSON.stringify(allScores);
             localStorage.setItem("allScores", newScore);
-            
+
             // Adds score to final page
 
-            // window.location.replace("highscores.html");
-            // render(newScore);
-            // var ulEl2 = document.createElement("ul");
-            // ulEl2.setAttribute("id", "ulEl2");
             for (let i = 0; i < allScores.length; i++) {
                 const el = allScores[i].initials + " " + allScores[i].score;
-                var li2 = document.createElement("li");  
+                var li2 = document.createElement("li");
                 li2.textContent = el;
                 var ul = document.querySelector("#highScoresUl");
-                ul.appendChild(li2);     
-                                
+                ul.appendChild(li2);
+
             }
-            
+
         }
-       
+
     });
-
-    // render(newScore);
-    // console.log(render(score));
 }
-
-    
-// function goBack() {
-//     window.history.back()
-// }
-
-// function startGame() {
-
-// }
-
-// function setNextQuestion() {
-
-
-// }
-
-// function selectAnswer () {
-
-
-// }
-

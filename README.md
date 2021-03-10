@@ -34,15 +34,20 @@ THEN the student can save their initials and score
 
 ### Demo
 
-#### [See how it works!](https://drive.google.com/file/d/1kSbOqD0NQTzyFpGc-1Y-iRe6U3hPOCnC/view?usp=sharing) This video clip demonstrates the code quiz application's rendering and functionality on a mobile device. 
+#### The following demonstrates the code quiz application's rendering and functionality in operation. 
+
+<img src="assets/quiz.gif" alt="app video" width="900" height="auto"> 
 
 ##### The following are screenshots of the application and overview of its functionality: <br>
 
-<img src="assets/Welcome.png" width=500 height=auto>
+<img src="assets/home.png" width=900 height=auto>
 
-<img src="assets/Quiz0.png" width=500 height=auto>
+<img src="assets/question.png" width=900 height=auto>
 
-<img src="assets/Finis.png" width=500 height=auto>
+<img src="assets/finished.png" width=900 height=auto>
+
+<img src="assets/scores.png" width=900 height=auto>
+
 
 ### Getting Started
 #### Installation - Clone the repo: <br>
