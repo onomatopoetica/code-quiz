@@ -1,21 +1,23 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/onomatopoetica/code-quiz)  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/onomatopoetica/code-quiz)  ![GitHub watchers](https://img.shields.io/github/watchers/onomatopoetica/code-quiz?label=Watch&style=social)  
+![GitHub last commit](https://img.shields.io/github/last-commit/onomatopoetica/code-quiz)  ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/onomatopoetica/code-quiz)  ![GitHub watchers](https://img.shields.io/github/watchers/onomatopoetica/code-quiz?label=Watch&style=social)  ![GitHub top language](https://img.shields.io/github/languages/top/onomatopoetica/code-quiz)
 
 
 ## Code Quiz Project 
 
----
+### About the Project
+
+#### This was a code quiz project for full stack web development students to test their knowledge of JavaScript fundamentals. The project scope sought to provide a timed quiz web application which stores high scores enabling students to gauge their progress compared to their peers. The application was to have a clean and polished user interface rendering responsively across a variety of devices. 
 
 ### Table of Contents
 1. [About the Project](#About-The-Project)
+1. [Project Links](#Project-Links)
 1. [Demo](#Demo)
 1. [Getting Started](#Getting-Started)
-1. [Project Links](#Project-Links)
 1. [Project Status](#Project-Status)
 1. [License](#License)
 
-### About the Project
-
-#### This was a code quiz project for fullstack web development students to test their knowledge of JavaScript fundamentals. The project scope sought to provide a timed quiz web application which stores high scores enabling students to gauge their progress compared to their peers. The application was to have a clean and polished user interface rendering responsively across a variety of devices. 
+### Project Links
+[Repo Link](https://github.com/onomatopoetica/code-quiz) <br>
+[GitHub Project Link](https://onomatopoetica.github.io/code-quiz/)
 
 #### Completion of the acceptance criteria implemented the following:
 ```
@@ -54,12 +56,7 @@ THEN the student can save their initials and score
    ```  
    git clone https://github.com/onomatopoetica/code-quiz.git
    ```
-
-### Project Links
-[Repo Link](https://github.com/onomatopoetica/code-quiz) <br>
-[GitHub Project Link](https://onomatopoetica.github.io/code-quiz/)
-
-
+   
 ### Project Status
 <details>
     <summary>Project Status</summary>
